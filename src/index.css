@@ -3,6 +3,7 @@ body{
   background-color: var(--background-color);
   color: var(--primary-text-color);
   transition: 0.2s;
+  overflow: hidden;
 }
 
 :root {
@@ -24,3 +25,8 @@ body{
   --hover-color: #2a2a2a; /* Subtle hover effect for buttons/cards */
   --border-color: #333333; /* Dark border color */
 }
+
+.test{
+  display: flex;
+}
+
