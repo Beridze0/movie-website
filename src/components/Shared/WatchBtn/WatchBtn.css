@@ -1,0 +1,16 @@
+.watch-btn{
+    background-color: var(--accent-color);
+    color: var(--button-text-color);
+    padding: 1.2rem 2.5rem;
+    border-radius: 1.2rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.watch-btn:hover{
+    background-color: var(--hover-color);
+    color: var(--button-hover-text-color);
+    scale: 1.01;
+}
