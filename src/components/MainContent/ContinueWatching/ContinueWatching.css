@@ -1,0 +1,14 @@
+.continue-watching-container{
+    display: flex;
+}
+
+.continue-watching{
+    display: flex;
+    flex-direction: column;
+}
+
+.continue-watching h1{
+    margin-top: 4rem;
+    font-size: 1.4rem;
+}
+

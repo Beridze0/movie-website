@@ -26,7 +26,7 @@ const Sidebar = () => {
 
     useEffect(()=>{
         const currentTheme = JSON.parse(localStorage.getItem('dark-mode'))
-        document.querySelector('body').setAttribute('dark-mode', currentTheme? "dark" : "light")
+        document.querySelector('body').setAttribute('data-theme', currentTheme? "dark" : "light")
     },[])
 
   return (
