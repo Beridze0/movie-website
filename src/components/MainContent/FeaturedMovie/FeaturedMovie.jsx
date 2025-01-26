@@ -8,8 +8,11 @@ const FeaturedMovie = () => {
       <div className='featured-movie-title'>
         <h1>THE SOUL CONDUCTOR</h1>
         <p>2022 | Adventure</p>
+        <WatchBtn />
       </div>
-      <WatchBtn />
+      <div className='featured-movie-img'>
+
+      </div>
     </div>
   )
 }
