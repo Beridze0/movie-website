@@ -5,6 +5,7 @@
     background-color: var(--card-background-color);
     height: 450px;
     justify-content: space-between;
+    border: 1px solid var(--border-color);
 }
 
  .featured-movie-title h1{

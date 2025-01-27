@@ -1,0 +1,8 @@
+.main-content-container{
+    overflow-y: scroll;
+    padding-inline: 3rem;
+}
+
+.main-content-container::-webkit-scrollbar{
+    display: none;
+}

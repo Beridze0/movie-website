@@ -1,16 +1,22 @@
-.continue-watching-container{
+.trending-container{
     display: flex;
-    margin-bottom: 4rem;
+    border-top: 1px solid var(--border-color);
 }
 
-.continue-watching{
+.trending{
     display: flex;
     flex-direction: column;
 }
 
-.continue-watching h1{
-    margin-top: 4rem;
+.trending h1{
     font-size: 1.4rem;
+}
+
+.trending-title{
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .movie-cards{

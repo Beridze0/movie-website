@@ -1,13 +1,13 @@
 .movie-card{
-    width: 270px;
-    height: 350px;
+    width: 250px;
+    height: 310px;
     border-radius: 1rem;
-    border: 1px solid red;
+    border: 1px solid var(--border-color);
 }
 
 .movie-card h1, .movie-rating{
     margin: 1rem;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     cursor: pointer;
 }
 
