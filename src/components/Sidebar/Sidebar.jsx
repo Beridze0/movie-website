@@ -9,7 +9,7 @@ import { IoMoonOutline } from "react-icons/io5";
 import { PiSun } from "react-icons/pi";
 import { NavLink, useNavigate } from 'react-router-dom';
 
-const Sidebar = ({toggleDarkMode, darkMode}) => {
+const Sidebar = ({toggleDarkMode, darkMode, smallSidebar}) => {
 
     const navigate = useNavigate()
    
@@ -18,11 +18,11 @@ const Sidebar = ({toggleDarkMode, darkMode}) => {
         <div className='sidebar'>
         <div className='sidebar-logo' onClick={()=>navigate('/')}>
             <GiSpiderBot size={23} className='logo-icon' />
-            <h1>Movie Website</h1>
+            {smallSidebar &&  <h1>Movie Website</h1>}
         </div>
         <div className='sidebar-navigation'>
             <div className='news-feed'>
-                <h1>News Feed</h1>
+            {smallSidebar &&  <h1>News Feed</h1>}
                 <NavLink
                     to="/"
                     className={({ isActive }) => 
@@ -30,7 +30,7 @@ const Sidebar = ({toggleDarkMode, darkMode}) => {
                     }
                     >
                     <CiCompass1 className={({isActive}) => isActive? "active-icon" : ""} size={22} />
-                    <p>Browse</p>
+                        {smallSidebar && <p>Browse</p>}
                 </NavLink>
                 <NavLink
                     to="/watchlist"
@@ -39,7 +39,7 @@ const Sidebar = ({toggleDarkMode, darkMode}) => {
                     }
                     >
                     <IoHeartOutline size={22} />
-                    <p>Watchlist</p>
+                    {smallSidebar && <p>Watchlist</p>}
                 </NavLink>
                 <NavLink
                     to="/coming-soon"
@@ -48,18 +48,18 @@ const Sidebar = ({toggleDarkMode, darkMode}) => {
                     }
                     >
                     <CiCalendar size={22} />
-                    <p>Coming Soon</p>
+                    {smallSidebar && <p>Coming Soon</p>}
                 </NavLink>
             </div>
             <div className='sidebar-profile'>
                 <button className='theme-btn' onClick={toggleDarkMode}>
                 {darkMode ? (
                         <>
-                        <PiSun size={19} /> Appearance: Dark
+                        <PiSun size={19} /> {smallSidebar && <p>Appearance: Dark</p>}
                         </>
                             ) : (
                         <>
-                        <IoMoonOutline size={19} /> Appearance: Light
+                        <IoMoonOutline size={19} /> {smallSidebar && <p>Appearance: Light</p>}
                         </>
                     )}
                 </button>

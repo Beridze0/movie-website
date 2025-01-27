@@ -26,11 +26,11 @@ const App = () => {
 
 
   const location = useLocation()
-  const sidebarVisible = location.pathname === "/"
+  const smallSidebar = location.pathname != "/movie"
 
   return (
     <div className='app'>
-      {sidebarVisible && <Sidebar toggleDarkMode={toggleDarkMode} darkMode={darkMode} />}
+       <Sidebar toggleDarkMode={toggleDarkMode} darkMode={darkMode} smallSidebar={smallSidebar} />
       <div className='main-content'>
         <Navbar />
         <Routes>

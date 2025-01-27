@@ -11,7 +11,7 @@
     padding: 1.5rem 1rem;
     gap: 1rem;
     color: var(--secondary-text-color);
-    width: 270px;
+    width: fit-content;
 }
 
 .sidebar-logo{
