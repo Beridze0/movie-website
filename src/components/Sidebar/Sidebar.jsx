@@ -9,26 +9,10 @@ import { IoMoonOutline } from "react-icons/io5";
 import { PiSun } from "react-icons/pi";
 import { NavLink, useNavigate } from 'react-router-dom';
 
-const Sidebar = () => {
-
-    const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("dark-mode") || false))
+const Sidebar = ({toggleDarkMode, darkMode}) => {
 
     const navigate = useNavigate()
-
-    const toggleDarkMode = () =>{
-        setDarkMode(prev => {
-            const newTheme = !prev
-            document.querySelector('body').setAttribute('data-theme', newTheme? "dark" : "light")
-            localStorage.setItem("dark-mode",JSON.stringify(newTheme))
-            return newTheme
-        })
-    }
-
-    useEffect(()=>{
-        const currentTheme = JSON.parse(localStorage.getItem('dark-mode'))
-        document.querySelector('body').setAttribute('data-theme', currentTheme? "dark" : "light")
-    },[])
-
+   
   return (
     <div className='sidebar-container'>
         <div className='sidebar'>

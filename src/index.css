@@ -39,7 +39,7 @@ body{
   --secondary-text-color: #b3b3b3; /* Grey for secondary text */
   --button-text-color: white;
   --button-hover-text-color: black;
-  --accent-color:#2a2a2a; /* Red accent for buttons or highlights */
+  --accent-color:#2a2a2a; 
   --card-background-color: #1e1e1e; /* Dark card background */
   --hover-color: #efefef; /* Subtle hover effect for buttons/cards */
   --border-color: #333333; /* Dark border color */

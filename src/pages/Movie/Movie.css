@@ -1,0 +1,136 @@
+/* container */
+.movie-container{
+    display: flex;
+}
+
+.movie{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 4rem;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* movie img */
+.movie-img-container{
+    min-width: 500px;
+    height: 400px;
+}
+
+.movie-img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Movie details */
+.movie-details{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-movie{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.movie-title h1{
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.movie-genre{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.movie-genre p{
+    margin: 0;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-background-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    color: var(--button-text-color);
+    cursor: pointer;
+}
+
+.movie-read-more, .movie-title, .movie-desc{
+    margin-block: 1rem;
+    width: fit-content;
+}
+
+
+.movie-desc p{
+    font-size: 0.8rem;
+}
+
+.movie-read-more p{
+    margin: 0;
+    color: var(--button-text-color);
+    cursor: pointer;
+}
+
+.movie-read-more:hover{
+    scale: 1.01;
+}
+
+
+/* MOVIE BTNS */
+.movie-btns{
+    display: flex;
+    gap: 1rem;
+}
+
+.watch-trailer-btn,.to-watchlist-btn{
+    padding: 1.1rem 1.5rem;
+    border-radius: 2rem;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.watch-trailer-btn{
+    background-color: var(--card-background-color);
+    color: var(--button-text-color);
+    border: none;
+}
+
+.watch-trailer-btn:hover{
+    background-color: var(--hover-color);
+    color: var(--button-hover-text-color);
+}
+
+.to-watchlist-btn{
+    background-color: transparent;
+    color: var(--button-text-color);
+}
+
+.to-watchlist-btn:hover{
+    background-color: var(--primary-text-color);
+    color: var(--button-hover-text-color);
+}
+
+/* MOVIE CAST */
+.movie-cast-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-cast{
+    border-top: 1px solid var(--border-color);
+    padding-top: 0.5rem;
+}
+
+.movie-cast h1{
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.movie-cast p{
+    margin: 0;
+    font-size: 0.95rem;
+}

@@ -11,12 +11,12 @@
     cursor: pointer;
 }
 
-.movie-img-container{
+.movie-card-img-container{
     width: 100%;
     height: 220px;
 }
 
-.movie-img{
+.movie-card-img{
     width: 100%;
     height: 100%;
     border-radius: 1rem 1rem 0 0;
