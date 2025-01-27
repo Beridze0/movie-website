@@ -2,10 +2,11 @@ import React from 'react'
 import './MovieCard.css'
 import image from '../../../assets/1.jpeg'
 import { MdStarRate } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const MovieCard = () => {
   return (
-    <div className='movie-card'>
+    <Link to={'/movie'} className='movie-card'>
         <div className='movie-card-img-container'>
             <img className='movie-card-img' src={image} alt="" />
         </div>
@@ -15,7 +16,7 @@ const MovieCard = () => {
             <MdStarRate />
             <MdStarRate />
         </div>
-    </div>
+    </Link>
   )
 }
 
