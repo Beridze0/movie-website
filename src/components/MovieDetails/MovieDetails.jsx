@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './MovieDetails.css'
 import MovieImg from '../MovieImg/MovieImg'
 import { MdStarRate } from "react-icons/md";
 
-const MovieDetails = ({image, genres, language, title, description, date, length, vote}) => {
+const MovieDetails = ({getData, id, image, genres, language, title, description, date, length, vote}) => {
+
+    const [isInList, setIsInList] = useState("TO WATCHLIST")
 
   return (
     <div className='movie-details'>
@@ -14,8 +16,8 @@ const MovieDetails = ({image, genres, language, title, description, date, length
                     <div className='movie-title'>
                         <h1>{title}</h1>
                         <div className='movie-vote'>
-                            <p>{vote.toFixed(1)}</p>
-                            {
+                            <p>{vote?.toFixed(1)}</p>
+                            {vote &&
                                 [...Array(Math.floor(vote))].map((_, i)=>(
                                     <MdStarRate key={i} />
                                 ))
@@ -26,11 +28,16 @@ const MovieDetails = ({image, genres, language, title, description, date, length
                         <p>{description}</p>
                         <p>Language : {language}</p>
                         <p>Release Date : {date}</p>
-                        <p>Duration : {length}</p>
+                        <p>Duration : {length}min</p>
                     </div>
                     <div className='movie-btns'>
                         <button className='watch-trailer-btn'>WATCH TRAILER</button>
-                        <button className='to-watchlist-btn'>TO WATCHLIST</button>
+                        <button className='to-watchlist-btn'
+                        disabled={isInList === "ADDED TO WATCHLIST"}
+                            onClick={() => {getData(image, title, vote, id)
+                                    setIsInList("ADDED TO WATCHLIST")
+                            }}
+                        >{isInList}</button>
                     </div>
                 </div>
                 <div className='movie-cast-container'>

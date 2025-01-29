@@ -11,6 +11,21 @@ const App = () => {
 
   const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("dark-mode") || false))
 
+    const getData = (img, title, rate, id) =>{
+      localStorage.setItem('watchlist', JSON.stringify(
+        {
+          image : img,
+          title : title,
+          rate : rate,
+          id: id
+        }
+      ))
+    }
+
+    const watchlistData = JSON.parse(localStorage.getItem("watchlist"))
+    
+
+
     const toggleDarkMode = () =>{
         setDarkMode(prev => {
             const newTheme = !prev
@@ -36,8 +51,8 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/movie/:id' element={<Movie />} />
-          <Route path='/watchlist' element={<Watchlist />} />
+          <Route path='/movie/:id' element={<Movie getData={getData} />} />
+          <Route path='/watchlist' element={<Watchlist watchlistData={watchlistData} />} />
         </Routes>
       </div>
     </div>

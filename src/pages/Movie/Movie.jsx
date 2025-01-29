@@ -3,14 +3,14 @@ import './Movie.css'
 import MovieDetails from '../../components/MovieDetails/MovieDetails'
 import { useParams } from 'react-router-dom'
 
-const Movie = () => {
+const Movie = ({getData}) => {
 
     const {id} = useParams()
     const [data, setData] = useState({})
 
    useEffect(()=>{
 
-    const API_KEY = process.env.REACT_APP_TMDB_API_KEY
+    const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
     const options = {
         method: 'GET',
@@ -26,10 +26,12 @@ const Movie = () => {
         .catch(err => console.error(err));
    },[id])
 
+
   return (
     <div className='movie-container'>
         <div className='movie'>
             <MovieDetails
+                id={data?.id}
                 image={data?.backdrop_path}
                 genres={data?.genres}
                 language={data?.original_language}
@@ -38,6 +40,7 @@ const Movie = () => {
                 date={data?.release_date}
                 length={data?.runtime}
                 vote={data?.vote_average}
+                getData={getData}
             />
         </div>
     </div>

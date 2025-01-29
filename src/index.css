@@ -31,6 +31,7 @@ body{
   --card-background-color: #f5f5f5;
   --hover-color: #2a2a2a;
   --border-color: #cccccc; /* Light border color */
+  --disabled: darkred;
 }
 
 [data-theme="dark"] {
@@ -43,6 +44,7 @@ body{
   --card-background-color: #1e1e1e; /* Dark card background */
   --hover-color: #efefef; /* Subtle hover effect for buttons/cards */
   --border-color: #333333; /* Dark border color */
+  --disabled: rgb(40, 1, 1);
 }
 
 .app{

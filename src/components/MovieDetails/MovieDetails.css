@@ -38,7 +38,7 @@
 
 
 .movie-desc p{
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 
 .movie-read-more p{
@@ -86,6 +86,14 @@
     color: var(--button-hover-text-color);
 }
 
+.to-watchlist-btn:disabled{
+    background-color: var(--disabled);
+    border: none;
+}
+
+.to-watchlist-btn:disabled:hover{
+    color: var(--primary-text-color);
+}
 /* MOVIE CAST */
 .movie-cast-container{
     margin-left: 1rem;

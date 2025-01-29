@@ -14,8 +14,8 @@ const MovieCard = ({movieImg,id,title,rating}) => {
         </div>
         <h1>{title}</h1>
         <div className='movie-card-rating'>
-          <p>{rating.toFixed(1)}</p>
-            {
+          <p>{rating?.toFixed(1)}</p>
+            { rating &&
               [...Array(ratingStars)].map((_, i)=> (
                 <MdStarRate key={i} />
               ))
