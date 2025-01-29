@@ -4,9 +4,8 @@ import MovieCard from '../../components/Shared/MovieCard/MovieCard'
 
 const Watchlist = ({watchlistData}) => {
   
-  console.log(watchlistData)
 
-  const isEmpty = Object.keys(watchlistData).length === 0;
+  const isEmpty = watchlistData === null
 
   return (
     <div className='watchlist-container'>
@@ -17,12 +16,17 @@ const Watchlist = ({watchlistData}) => {
             </div>
         :
           <div className='watchlist-movie-cards'>
-              <MovieCard
-                    movieImg={watchlistData.image}
-                    title={watchlistData.title}
-                    id={watchlistData.id}
-                    rating={watchlistData.rate}
-                />   
+            {
+              watchlistData?.map((item, index)=>(
+                <MovieCard
+                key={index}
+                movieImg={item.image}
+                title={item.title}
+                id={item.id}
+                rating={item.rate}
+            />   
+              ))
+            }
             </div>
           }
             

@@ -5,7 +5,9 @@ import { MdStarRate } from "react-icons/md";
 
 const MovieDetails = ({getData, id, image, genres, language, title, description, date, length, vote}) => {
 
-    const [isInList, setIsInList] = useState("TO WATCHLIST")
+    const [isInList, setIsInList] = useState(false)
+
+    
 
   return (
     <div className='movie-details'>
@@ -33,11 +35,11 @@ const MovieDetails = ({getData, id, image, genres, language, title, description,
                     <div className='movie-btns'>
                         <button className='watch-trailer-btn'>WATCH TRAILER</button>
                         <button className='to-watchlist-btn'
-                        disabled={isInList === "ADDED TO WATCHLIST"}
+                            disabled={isInList}
                             onClick={() => {getData(image, title, vote, id)
-                                    setIsInList("ADDED TO WATCHLIST")
+                                            setIsInList(prev => !prev)
                             }}
-                        >{isInList}</button>
+                        >{isInList? "ADDED TO WATCHLIST" : "TO WATCHLIST"}</button>
                     </div>
                 </div>
                 <div className='movie-cast-container'>

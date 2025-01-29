@@ -10,17 +10,26 @@ import Watchlist from './pages/Watchlist/Watchlist'
 const App = () => {
 
   const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem("dark-mode") || false))
+  const [watchlistItems, setWatchlistItems] = useState(JSON.parse(localStorage.getItem('watchlist')) || [])
 
-    const getData = (img, title, rate, id) =>{
-      localStorage.setItem('watchlist', JSON.stringify(
-        {
-          image : img,
-          title : title,
-          rate : rate,
-          id: id
-        }
-      ))
+
+
+  const getData = (img, title, rate, id) => {
+
+    const existedMovie = watchlistItems.some(item => item.id === id)
+
+    if (existedMovie) {
+      alert('This movie is already added to the watchlist!')
+      return;
     }
+
+    setWatchlistItems(prev => {
+      const updatedItems = [...prev, { image: img, title, rate, id }]
+      localStorage.setItem('watchlist', JSON.stringify(updatedItems))
+      return updatedItems
+    });
+  }
+  
 
     const watchlistData = JSON.parse(localStorage.getItem("watchlist"))
     
