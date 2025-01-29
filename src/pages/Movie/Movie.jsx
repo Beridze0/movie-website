@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import './Movie.css'
-import MovieImg from '../../components/MovieImg/MovieImg'
 import MovieDetails from '../../components/MovieDetails/MovieDetails'
 import { useParams } from 'react-router-dom'
 
@@ -23,8 +22,6 @@ const Movie = () => {
         .then(data => setData(data))
         .catch(err => console.error(err));
    },[])
-
-   console.log(data)
 
   return (
     <div className='movie-container'>

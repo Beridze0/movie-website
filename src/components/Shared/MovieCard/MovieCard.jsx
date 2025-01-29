@@ -2,7 +2,11 @@ import React from 'react'
 import './MovieCard.css'
 import { MdStarRate } from "react-icons/md";
 import { Link } from 'react-router-dom';
-const MovieCard = ({movieImg,id,title}) => {
+const MovieCard = ({movieImg,id,title,rating}) => {
+
+  const ratingStars = Math.floor(rating)
+  
+
   return (
     <Link to={`/movie/${id}`} className='movie-card'>
         <div className='movie-card-img-container'>
@@ -10,9 +14,12 @@ const MovieCard = ({movieImg,id,title}) => {
         </div>
         <h1>{title}</h1>
         <div className='movie-card-rating'>
-            <MdStarRate />
-            <MdStarRate />
-            <MdStarRate />
+          <p>{rating.toFixed(1)}</p>
+            {
+              [...Array(ratingStars)].map((_, i)=> (
+                <MdStarRate key={i} />
+              ))
+            }
         </div>
     </Link>
   )

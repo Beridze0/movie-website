@@ -1,6 +1,7 @@
 import React from 'react'
 import './MovieDetails.css'
 import MovieImg from '../MovieImg/MovieImg'
+import { MdStarRate } from "react-icons/md";
 
 const MovieDetails = ({image, genres, language, title, description, date, length, vote}) => {
 
@@ -12,7 +13,14 @@ const MovieDetails = ({image, genres, language, title, description, date, length
                 <div className='about-movie'>
                     <div className='movie-title'>
                         <h1>{title}</h1>
-                        <p>{vote}</p>
+                        <div className='movie-vote'>
+                            <p>{vote.toFixed(1)}</p>
+                            {
+                                [...Array(Math.floor(vote))].map((_, i)=>(
+                                    <MdStarRate key={i} />
+                                ))
+                            }
+                        </div>
                     </div>
                     <div className='movie-desc'>
                         <p>{description}</p>

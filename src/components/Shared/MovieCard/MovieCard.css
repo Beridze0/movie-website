@@ -31,3 +31,15 @@
     border-radius: 1rem 1rem 0 0;
     cursor: pointer;
 }
+
+
+.movie-card-rating p{
+    margin: 0;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.movie-card-rating{
+    display: flex;
+    align-items: center;
+}

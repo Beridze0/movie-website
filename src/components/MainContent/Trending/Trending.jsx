@@ -23,6 +23,7 @@ const Trending = () => {
   },[])
 
 
+
   
 
   return (
@@ -39,6 +40,7 @@ const Trending = () => {
                   movieImg={item.backdrop_path}
                   id={item.id}
                   title={item.original_title}
+                  rating={item.vote_average}
                     />
               )) }
             </div>

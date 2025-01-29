@@ -20,11 +20,16 @@
     margin: 0;
 }
 
-.movie-title p{
+.movie-vote p{
     margin: 0;
     font-size: 0.95rem;
+    margin-right: 0.5rem;
 }
 
+.movie-vote{
+    display: flex;
+    align-items: center;
+}
 
 .movie-title, .movie-desc{
     margin-block: 1rem;
