@@ -8,11 +8,12 @@ const Trending = () => {
   const [data, setData] = useState({})
 
   useEffect(()=>{
+    const API_KEY = process.env.REACT_APP_TMDB_API_KEY
     const options = {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3ZTc2ODVmNDNmOTVlM2ZkNDlmMjVjNmZlYWJmMDBkNiIsIm5iZiI6MTcyMTE0NjYzMC4yNzYsInN1YiI6IjY2OTY5ZDA2ZDI2MzQ4YjNkM2RmODExMCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._J7-VtW7_GCkFSMf5KN0dPdL708yZLo5EBaVblCiEDc'
+        Authorization: `Bearer ${API_KEY}`
       }
     };
     
