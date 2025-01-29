@@ -4,6 +4,7 @@ import Sidebar from './components/Sidebar/Sidebar'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Movie from './pages/Movie/Movie'
+import Watchlist from './pages/Watchlist/Watchlist'
 
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/movie' element={<Movie />} />
+          <Route path='/watchlist' element={<Watchlist />} />
         </Routes>
       </div>
     </div>

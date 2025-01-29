@@ -1,0 +1,10 @@
+.watchlist{
+    display: flex;
+    padding: 2rem;
+}
+
+.watchlist-movie-cards{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1rem;
+}
