@@ -1,0 +1,15 @@
+.movie-genre{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.movie-genre p{
+    margin: 0;
+    font-size: 0.9rem;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-background-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1.5rem;
+    color: var(--button-text-color);
+    cursor: pointer;
+}
