@@ -36,7 +36,7 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/movie' element={<Movie />} />
+          <Route path='/movie/:id' element={<Movie />} />
           <Route path='/watchlist' element={<Watchlist />} />
         </Routes>
       </div>

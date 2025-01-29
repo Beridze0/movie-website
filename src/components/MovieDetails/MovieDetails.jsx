@@ -1,22 +1,24 @@
 import React from 'react'
 import './MovieDetails.css'
+import MovieImg from '../MovieImg/MovieImg'
 
-const MovieDetails = () => {
+const MovieDetails = ({image, genres, language, title, description, date, length, vote}) => {
+
   return (
     <div className='movie-details'>
+        <div className='movie-original-img'>
+                <MovieImg image={image} />
+        </div>
                 <div className='about-movie'>
                     <div className='movie-title'>
-                        <h1>AVATAR: The Way of Water</h1>
+                        <h1>{title}</h1>
+                        <p>{vote}</p>
                     </div>
                     <div className='movie-desc'>
-                        <p>Lorem Ipsum is simply dummy text of the printing
-                            and typesetting industry. Lorem Ipsum has been
-                            the industry's standard dummy text ever since
-                            the 1500s, when an unknown printer took a galley of type and scrambled
-                            it to make a type specimen book. It has survived not only 
-                            five centuries, but also the leap into electronic typesetting,
-                            remaining essentially unchanged. It was popularised in the
-                            sions of Lorem Ipsum.</p>
+                        <p>{description}</p>
+                        <p>Language : {language}</p>
+                        <p>Release Date : {date}</p>
+                        <p>Duration : {length}</p>
                     </div>
                     <div className='movie-btns'>
                         <button className='watch-trailer-btn'>WATCH TRAILER</button>

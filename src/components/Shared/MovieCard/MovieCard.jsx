@@ -1,16 +1,14 @@
 import React from 'react'
 import './MovieCard.css'
-import image from '../../../assets/1.jpeg'
 import { MdStarRate } from "react-icons/md";
 import { Link } from 'react-router-dom';
-
-const MovieCard = () => {
+const MovieCard = ({movieImg,id,title}) => {
   return (
-    <Link to={'/movie'} className='movie-card'>
+    <Link to={`/movie/${id}`} className='movie-card'>
         <div className='movie-card-img-container'>
-            <img className='movie-card-img' src={image} alt="" />
+            <img className='movie-card-img' src={`https://image.tmdb.org/t/p/w500` + movieImg} alt="Movie img" />
         </div>
-        <h1>AVATAR</h1>
+        <h1>{title}</h1>
         <div className='movie-card-rating'>
             <MdStarRate />
             <MdStarRate />

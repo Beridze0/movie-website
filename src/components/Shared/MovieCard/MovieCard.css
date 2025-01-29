@@ -1,9 +1,15 @@
 .movie-card{
-    width: 250px;
+    width: 270px;
     height: 310px;
     border-radius: 1rem;
     border: 1px solid var(--border-color);
     text-decoration: none;
+    transition: 0.2s;
+    color: var(--secondary-text-color);
+}
+
+.movie-card:hover{
+    scale: 1.01;
     color: var(--primary-text-color);
 }
 
@@ -12,6 +18,7 @@
     font-size: 1.1rem;
     cursor: pointer;
 }
+
 
 .movie-card-img-container{
     width: 100%;

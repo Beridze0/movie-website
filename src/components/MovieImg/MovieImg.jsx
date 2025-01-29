@@ -1,12 +1,11 @@
 import React from 'react'
 import './MovieImg.css'
-import image from '../../assets/1.jpeg'
 
 
-const MovieImg = () => {
+const MovieImg = ({image}) => {
   return (
     <div className='movie-img-container'>
-        <img className='movie-img' src={image} alt="" />
+        <img className='movie-img' src={`https://image.tmdb.org/t/p/w500` + image} alt="" />
     </div>
   )
 }
