@@ -29,7 +29,6 @@ const Watchlist = ({watchlistData}) => {
             }
             </div>
           }
-            
         </div>
     </div>
   )

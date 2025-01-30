@@ -17,3 +17,47 @@
     font-size: 1.5rem;
     color: var(--secondary-text-color);
 }
+
+@media (max-width: 1200px) {
+    .watchlist-movie-cards {
+        grid-template-columns: auto auto auto; /* 3 columns */
+    }
+}
+
+@media (max-width: 992px) {
+    .watchlist-movie-cards {
+        grid-template-columns: auto auto; /* 2 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .watchlist {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+
+    .watchlist-movie-cards {
+        grid-template-columns: auto; /* 1 column */
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .watchlist-empty {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .watchlist {
+        padding: 1rem;
+    }
+
+    .watchlist-movie-cards {
+        gap: 1rem;
+    }
+
+    .watchlist-empty {
+        font-size: 1rem;
+        text-align: center;
+    }
+}

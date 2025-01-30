@@ -9,7 +9,7 @@
 }
 
 .movie-card:hover{
-    scale: 1.01;
+    scale: 1.005;
     color: var(--primary-text-color);
 }
 
