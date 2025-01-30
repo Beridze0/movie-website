@@ -34,4 +34,55 @@
     color: var(--secondary-text-color);
 }
 
+@media (max-width: 1200px) {
+    .navbar-search {
+        width: 70%;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-search {
+        width: 80%;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .navbar-search-input {
+        font-size: 0.88rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-search {
+        width: 90%;
+        padding: 0.4rem 0.7rem;
+    }
+
+    .navbar-search-input {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.8rem;
+    }
+
+    .navbar-search {
+        width: 100%;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .search-icon, .settings-knobs {
+        size: 16px;
+    }
+
+    .navbar-search-input {
+        font-size: 0.8rem;
+        padding: 0.2rem;
+    }
+}
 
