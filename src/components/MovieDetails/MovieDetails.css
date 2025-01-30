@@ -150,6 +150,10 @@
         gap: 1.5rem;
     }
 
+    .movie-vote{
+        justify-content: center;
+    }
+
     .about-movie {
         width: 100%;
         align-items: center;
