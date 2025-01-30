@@ -7,6 +7,7 @@ const MovieDetails = ({getData, id, image, genres, language, title, description,
 
     const [isInList, setIsInList] = useState(false)
 
+    console.log(genres);
     
 
   return (
@@ -25,6 +26,12 @@ const MovieDetails = ({getData, id, image, genres, language, title, description,
                                 ))
                             }
                         </div>
+                    </div>
+                    <div className='movie-genres-container'>
+                        {genres.map((genre, index)=>(
+                            <p className='movie-genre' key={index}>{genre.name}</p>
+
+                        ))}
                     </div>
                     <div className='movie-desc'>
                         <p>{description}</p>
